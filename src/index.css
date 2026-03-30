@@ -1,0 +1,62 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-headline: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-primary: #ff85c9;
+  --color-primary-container: #f672be;
+  --color-secondary: #c197fe;
+  --color-tertiary: #8debff;
+  --color-background: #0e0e11;
+  --color-surface: #0e0e11;
+  --color-surface-container: #19191d;
+  --color-surface-container-high: #1f1f23;
+  --color-surface-container-highest: #25252a;
+  --color-surface-bright: #2c2c30;
+  --color-on-surface: #f0edf1;
+  --color-on-surface-variant: #acaaae;
+  --color-on-primary: #5e0041;
+  --color-on-secondary: #3d0e74;
+  --color-error: #ff6e84;
+  --color-error-container: #a70138;
+  --color-on-error: #490013;
+  --color-outline: #767579;
+  --color-outline-variant: #48474b;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-on-surface font-sans antialiased;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-surface-container-high/70 backdrop-blur-xl border border-outline-variant/10;
+  }
+  
+  .neon-glow-primary {
+    @apply shadow-[0_0_20px_rgba(255,133,201,0.3)];
+  }
+  
+  .neon-glow-secondary {
+    @apply shadow-[0_0_20px_rgba(193,151,254,0.3)];
+  }
+  
+  .neon-glow-tertiary {
+    @apply shadow-[0_0_20px_rgba(141,235,255,0.3)];
+  }
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
